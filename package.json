@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "express": "^4.18.2",
+    "fs": "^0.0.1-security",
+    "http": "^0.0.1-security",
+    "libsodium-wrappers": "^0.7.10"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "authheader",
+  "version": "1.0.0",
+  "description": "rest api for generate auth header ",
+  "main": "server.js",
+  "devDependencies": {},
+  "author": "Faiyaz",
+  "license": "ISC"
+}
