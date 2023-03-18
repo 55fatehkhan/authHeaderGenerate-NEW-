@@ -42,8 +42,9 @@ const signMessage = async (signing_string, privateKey) => {
 
 //-- createAuthorizationHeader function
 const createAuthorizationHeader = async (message) => {
-   const { signing_string, expires, created } = await createSigningString(JSON.stringify(message));
-   const signature = await signMessage(signing_string, process.env.sign_private_key || "4YgiOzDzlQfWv2JRnUBv0Rw5OlW3pB8nAmKFeyMWFCtBoVDZef2sXazaCukprRUARgVBClrLPIZ51aH26seB8w==");
+   const { signing_string, expires, created } = await createSigningString(JSON.stringify(message)); 
+   //signing private key 
+   const signature = await signMessage(signing_string, process.env.sign_private_key || "rGm0v53aB/FTxpq6RY1WQwpIyIKxkKJZDNhoz8/VCfs0dQ7Gkbx5o4DojyoHk8YT1wMGE1/u/qFMqNbkcY1UYQ==");
    const subscriber_id = "api.greenreceipt.in";
    const header = `Signature keyId="${subscriber_id}|28843C15-9764-4245-92CF-7D236B855711|ed25519",algorithm="ed25519",created="${created}",expires="${expires}",headers="(created) (expires) digest",signature="${signature}"`
    // console.log(header);
